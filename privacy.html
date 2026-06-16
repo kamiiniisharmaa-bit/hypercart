@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>HyperCart | Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fafafc;
+      color: #1a2c3e;
+      line-height: 1.55;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* header styling (consistent with previous pages) */
+    .header {
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 4px 12px rgba(0,0,0,0.02);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(2px);
+      background: rgba(255,255,255,0.96);
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 18px 0;
+      gap: 16px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .brand-name {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #0b2b5e, #1e4a76);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-decoration: none;
+    }
+
+    .brand-name a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .hyper-tag {
+      font-size: 14px;
+      font-weight: 500;
+      background: #eef2ff;
+      color: #1e4a76;
+      padding: 2px 8px;
+      border-radius: 40px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #2c3e50;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #1e5a8b;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .icon-btn {
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      color: #1f2e3a;
+      transition: 0.2s;
+    }
+
+    /* privacy hero section */
+    .privacy-hero {
+      background: linear-gradient(110deg, #f4f9ff 0%, #eef3fc 100%);
+      padding: 56px 0 40px;
+      border-bottom: 1px solid #e2edf7;
+    }
+
+    .privacy-header {
+      max-width: 900px;
+    }
+
+    .privacy-header h1 {
+      font-size: 48px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #0f2b3d, #1f6392);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 16px;
+    }
+
+    .last-updated {
+      color: #5d6f83;
+      font-size: 15px;
+      margin-top: 8px;
+      border-left: 4px solid #2b6e9e;
+      padding-left: 16px;
+    }
+
+    /* main content card */
+    .privacy-content {
+      max-width: 1100px;
+      margin: 56px auto 80px;
+      background: white;
+      border-radius: 36px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+      padding: 48px 56px;
+    }
+
+    .privacy-section {
+      margin-bottom: 42px;
+    }
+
+    .privacy-section h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #0b2b46;
+      margin-bottom: 18px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e5eff7;
+    }
+
+    .privacy-section h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 24px 0 12px 0;
+      color: #1f4e6e;
+    }
+
+    .privacy-section p, .privacy-section li {
+      color: #2c4258;
+      margin-bottom: 14px;
+      line-height: 1.6;
+    }
+
+    .privacy-section ul, .privacy-section ol {
+      margin: 16px 0 20px 28px;
+    }
+
+    .privacy-section li {
+      margin-bottom: 8px;
+    }
+
+    .highlight-box {
+      background: #f0f6fe;
+      border-left: 4px solid #1f6392;
+      padding: 22px 28px;
+      border-radius: 24px;
+      margin: 28px 0;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #f9fbfe;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .data-table th, .data-table td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid #e2edf2;
+    }
+
+    .data-table th {
+      background: #eef3fc;
+      font-weight: 700;
+      color: #0b2b46;
+    }
+
+    .privacy-footer {
+      text-align: center;
+      margin-top: 24px;
+      padding-top: 28px;
+      border-top: 1px solid #e2edf2;
+      font-size: 14px;
+      color: #5f7f9a;
+    }
+
+    /* footer styling */
+    .footer {
+      background: #0b1a24;
+      color: #cfdfed;
+      padding: 48px 0 32px;
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 48px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .footer-col p, .footer-col a {
+      color: #b9cfdf;
+      text-decoration: none;
+      line-height: 1.8;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #2a404e;
+      font-size: 14px;
+    }
+
+    @media (max-width: 780px) {
+      .container {
+        padding: 0 20px;
+      }
+      .nav-links {
+        display: none;
+      }
+      .privacy-content {
+        padding: 32px 24px;
+      }
+      .privacy-header h1 {
+        font-size: 36px;
+      }
+      .data-table th, .data-table td {
+        padding: 10px 12px;
+        font-size: 13px;
+      }
+    }
+
+    .toast-msg {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1e2f3a;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 60px;
+      font-weight: 500;
+      z-index: 200;
+      opacity: 0;
+      transition: 0.2s;
+      pointer-events: none;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+      font-family: 'Inter', sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<div class="toast-msg" id="toastMsg">🔒 Privacy settings loaded</div>
+
+<header class="header">
+  <div class="container">
+    <div class="nav-bar">
+      <div class="logo-area">
+        <a href="#" style="text-decoration: none; display: flex; align-items: baseline; gap: 6px;" id="homeLink">
+          <span class="brand-name">HyperCart</span>
+          <span class="hyper-tag">⚡ express</span>
+        </a>
+      </div>
+      <div class="nav-links">
+       <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+      </div>
+      <div class="header-icons">
+        <button class="icon-btn" aria-label="Search">🔍</button>
+        <button class="icon-btn" aria-label="Cart">🛒</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="privacy-hero">
+    <div class="container">
+      <div class="privacy-header">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Effective date: June 12, 2026 | Last revised: June 12, 2026</p>
+        <p style="margin-top: 18px; font-size: 18px; color: #2b5b84;">Your privacy is a top priority at HyperCart. This policy explains how we collect, use, share, and protect your personal information when you use our platform.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="privacy-content">
+      <div class="privacy-section">
+        <h2>1. Information We Collect</h2>
+        <p>To provide you with a seamless shopping experience, HyperCart collects various types of information, including:</p>
+        <ul>
+          <li><strong>Personal Identifiers:</strong> Name, email address, phone number, billing/shipping address.</li>
+          <li><strong>Payment Information:</strong> Credit/debit card details, PayPal account data (processed by secure PCI-compliant partners).</li>
+          <li><strong>Order History:</strong> Products purchased, returns, wishlist, and preferences.</li>
+          <li><strong>Technical Data:</strong> IP address, browser type, device identifiers, cookies, and usage analytics.</li>
+          <li><strong>Communications:</strong> Customer support inquiries, reviews, and survey responses.</li>
+        </ul>
+        <div class="highlight-box">
+          <strong>📌 Sensitive Data Notice:</strong> We do not intentionally collect sensitive personal information (e.g., health data, political beliefs). If we need such data for specific services (e.g., medical devices), we will obtain explicit consent.
+        </div>
+      </div>
+
+      <div class="privacy-section">
+        <h2>2. How We Use Your Information</h2>
+        <p>HyperCart uses the collected information for legitimate business purposes, including:</p>
+        <ul>
+          <li>Processing and fulfilling orders, returns, and exchanges.</li>
+          <li>Personalizing your shopping experience and product recommendations.</li>
+          <li>Communicating order status, shipping updates, and promotional offers (with opt-out options).</li>
+          <li>Preventing fraud, unauthorized transactions, and enhancing platform security.</li>
+          <li>Improving our website, mobile app, and customer service through analytics.</li>
+          <li>Complying with legal obligations (e.g., tax, record-keeping, law enforcement requests).</li>
+        </ul>
+        <p>We rely on contractual necessity, legitimate interests, and your consent where required by law. You may withdraw consent at any time.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>3. Cookies & Tracking Technologies</h2>
+        <p>HyperCart uses cookies, web beacons, and similar technologies to enhance functionality and analyze trends. These help us remember your cart items, recognize you on return visits, and deliver relevant ads. You can manage cookie preferences via your browser settings or our cookie consent tool. Disabling certain cookies may affect site performance.</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Cookie Type</th><th>Purpose</th><th>Duration</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Essential</td><td>Cart, checkout, login security</td><td>Session / persistent</td></tr>
+            <tr><td>Analytics</td><td>Page visits, traffic sources (Google Analytics)</td><td>Up to 2 years</td></tr>
+            <tr><td>Marketing</td><td>Personalized ads, retargeting</td><td>30-180 days</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="privacy-section">
+        <h2>4. Sharing & Disclosure of Information</h2>
+        <p>We do not sell your personal data. However, we share information with trusted third parties to operate our business:</p>
+        <ul>
+          <li><strong>Service Providers:</strong> Payment processors (Stripe, PayPal), shipping carriers (FedEx, USPS), cloud hosting, and analytics partners (Google).</li>
+          <li><strong>Legal Compliance:</strong> If required by law, court order, or governmental regulation, or to protect the rights and safety of HyperCart and its users.</li>
+          <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or asset sale, your data may be transferred with notice to you.</li>
+        </ul>
+        <p>All third parties are contractually obligated to protect your data and use it only for specified purposes.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>5. Data Retention</h2>
+        <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required by law. Typically:</p>
+        <ul>
+          <li>Account information: Retained until you close your account, plus a reasonable period for legal claims.</li>
+          <li>Order records: Up to 7 years for tax and warranty purposes.</li>
+          <li>Analytics data: Aggregated and anonymized after 26 months.</li>
+        </ul>
+        <p>You may request deletion of your data as described in Section 8 (Your Rights).</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>6. Security Measures</h2>
+        <p>HyperCart implements industry-standard safeguards including SSL encryption, firewalls, role-based access, and regular security audits. While no system is 100% secure, we continuously update our practices to protect against unauthorized access, alteration, or destruction of your personal data. In the event of a data breach, we will notify affected users and authorities as required by applicable laws.</p>
+        <div class="highlight-box">
+          <strong>🛡️ Your Responsibility:</strong> Use strong, unique passwords for your HyperCart account and enable two-factor authentication where available. Never share your login credentials.
+        </div>
+      </div>
+
+      <div class="privacy-section">
+        <h2>7. International Data Transfers</h2>
+        <p>HyperCart operates from the United States but may serve customers worldwide. If you access our services from outside the US, your information may be transferred to, stored, and processed in the US or other countries where our servers or service providers are located. We rely on Standard Contractual Clauses (SCCs) or equivalent mechanisms for EU/UK data transfers to ensure adequate protection.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>8. Your Privacy Rights</h2>
+        <p>Depending on your jurisdiction (e.g., GDPR, CCPA/CPRA, LGPD), you may have the following rights:</p>
+        <ul>
+          <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
+          <li><strong>Correction:</strong> Update inaccurate or incomplete information.</li>
+          <li><strong>Deletion:</strong> Request erasure of your data (subject to legal exceptions).</li>
+          <li><strong>Opt-Out of Sale/Sharing:</strong> HyperCart does not sell personal data; you can opt out of targeted advertising via “Do Not Sell or Share My Personal Information” link.</li>
+          <li><strong>Portability:</strong> Receive a machine-readable copy of your data.</li>
+          <li><strong>Withdraw Consent:</strong> For marketing emails, click “unsubscribe” or adjust preferences in your account.</li>
+        </ul>
+        <p>To exercise any right, contact our Privacy Team at <strong>privacy@hypercart.com</strong> or via the form in your account settings. We will respond within 30 days. Verification may be required.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>9. Children's Privacy</h2>
+        <p>HyperCart does not knowingly sell products to or collect personal information from anyone under the age of 16. If you are a parent or guardian and believe your child has provided us with personal data, please contact us immediately. We will delete such information promptly.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>10. Third-Party Links</h2>
+        <p>Our platform may contain links to external websites (e.g., brand partners, social media). HyperCart is not responsible for the privacy practices of those third parties. We encourage you to read their privacy policies before providing any personal information.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>11. Changes to This Privacy Policy</h2>
+        <p>We may update this policy periodically to reflect changes in our practices or legal requirements. The “Effective date” at the top of this page indicates when the latest version was posted. For significant changes, we will notify you via email or a prominent notice on our website. Your continued use of HyperCart after changes constitutes acceptance of the updated policy.</p>
+      </div>
+
+      <div class="privacy-section">
+        <h2>12. Contact Information</h2>
+        <p>If you have any questions, concerns, or complaints regarding this Privacy Policy or our data handling practices, please reach out:</p>
+        <ul>
+          <li><strong>Email:</strong> privacy@hypercart.com</li>
+          <li><strong>Mail:</strong> HyperCart Privacy Office, 123 Commerce Ave, Suite 400, Wilmington, DE 19801, USA</li>
+          <li><strong>Phone (Toll-Free):</strong> +1 (800) 555-HYPER</li>
+        </ul>
+        <p>For EU/UK residents, you also have the right to lodge a complaint with your local data protection supervisory authority.</p>
+      </div>
+
+      <div class="privacy-footer">
+        <p>🔐 Your trust is our greatest asset. Thank you for being part of the HyperCart community.</p>
+        <p style="margin-top: 12px;">⚡ HyperCart — Smart, secure, and transparent commerce.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>HyperCart</h4>
+        <p>Next-generation eCommerce <br>bringing innovation to your doorstep.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <p><a href="#">About</a></p>
+        <p><a href="#">Careers</a></p>
+        <p><a href="#">Sustainability</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <p><a href="#">Help Center</a></p>
+        <p><a href="#">Returns</a></p>
+        <p><a href="#">Shipping info</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <p><a href="#">Terms of Service</a></p>
+        <p><a href="#" style="font-weight:500;">Privacy Policy</a></p>
+        <p><a href="#">Cookie Settings</a></p>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 HyperCart — Fast, reliable & futuristic shopping. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // toast notification helper
+  const toast = document.getElementById('toastMsg');
+  function showToast(message) {
+    if(!toast) return;
+    toast.innerText = message;
+    toast.style.opacity = '1';
+    setTimeout(() => {
+      toast.style.opacity = '0';
+    }, 2200);
+  }
+
+  // show ready message after load
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      showToast('🔐 HyperCart Privacy Policy — Your data is protected');
+    }, 300);
+  });
+
+  // home link simulation
+  const homeLink = document.getElementById('homeLink');
+  if(homeLink) {
+    homeLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      showToast('🏠 Returning to HyperCart homepage...');
+      setTimeout(() => {
+        alert('✨ In production, this would redirect to the homepage. HyperCart values your privacy!');
+      }, 200);
+    });
+  }
+
+  // interactive footer links / header icons demo
+  const footerLinks = document.querySelectorAll('.footer-col a');
+  footerLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      if(link.getAttribute('href') === '#') {
+        e.preventDefault();
+        showToast(`📄 Navigating to ${link.innerText} — more info soon`);
+      }
+    });
+  });
+
+  const searchBtn = document.querySelector('.icon-btn[aria-label="Search"]');
+  if(searchBtn) {
+    searchBtn.addEventListener('click', () => showToast('🔍 Search our help center or products!'));
+  }
+  const cartBtn = document.querySelector('.icon-btn[aria-label="Cart"]');
+  if(cartBtn) {
+    cartBtn.addEventListener('click', () => showToast('🛒 Your cart is secure and ready.'));
+  }
+
+  // optional smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if(href !== "#" && href !== "#!" && href !== "#homeLink" && href !== "") {
+        const target = document.querySelector(href);
+        if(target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>

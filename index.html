@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>HyperCart | Next-Gen Ecom Experience</title>
+  <!-- Google Fonts & simple reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fafafc;
+      color: #111;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* container utility */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* header & navigation */
+    .header {
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 4px 12px rgba(0,0,0,0.02);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(2px);
+      background: rgba(255,255,255,0.96);
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 18px 0;
+      gap: 16px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .brand-name {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #0b2b5e, #1e4a76);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hyper-tag {
+      font-size: 14px;
+      font-weight: 500;
+      background: #eef2ff;
+      color: #1e4a76;
+      padding: 2px 8px;
+      border-radius: 40px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #2c3e50;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #1e5a8b;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .icon-btn {
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      position: relative;
+      color: #1f2e3a;
+      transition: 0.2s;
+    }
+
+    /* hero section */
+    .hero {
+      background: linear-gradient(105deg, #ffffff 0%, #f4f9ff 100%);
+      padding: 70px 0 60px;
+    }
+
+    .hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .hero-content {
+      flex: 1.2;
+    }
+
+    .hero-badge {
+      background: #e2eafc;
+      color: #0057b3;
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      background: linear-gradient(to right, #0A2540, #2b6e9e);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .hero-desc {
+      font-size: 18px;
+      color: #334e68;
+      max-width: 520px;
+      margin-bottom: 32px;
+    }
+
+    .cta-btn {
+      background: #0f2b3d;
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      font-weight: 600;
+      border-radius: 48px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .cta-btn:hover {
+      background: #1c4968;
+      transform: translateY(-2px);
+    }
+
+    .hero-image {
+      flex: 1;
+      background: radial-gradient(circle at 30% 20%, #f0f6ff, #e9f0fa);
+      border-radius: 48px;
+      padding: 12px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 540px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 32px;
+      object-fit: cover;
+    }
+
+    /* featured categories */
+    .section-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 48px 0 28px 0;
+      letter-spacing: -0.3px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 28px;
+      margin: 32px 0 24px;
+    }
+
+    .category-card {
+      background: white;
+      border-radius: 32px;
+      padding: 22px 12px;
+      text-align: center;
+      transition: 0.25s ease;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.02);
+      border: 1px solid #eef2f0;
+      cursor: pointer;
+    }
+
+    .category-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+      border-color: #cbdde9;
+    }
+
+    .category-card img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      margin-bottom: 14px;
+    }
+
+    .category-card span {
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    /* product grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 32px;
+      margin: 32px 0 64px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      transition: all 0.25s;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.03);
+      border: 1px solid #eef2f0;
+      padding-bottom: 18px;
+    }
+
+    .product-card:hover {
+      transform: scale(1.01);
+      box-shadow: 0 24px 36px -12px rgba(0, 0, 0, 0.12);
+      border-color: #cfdfed;
+    }
+
+    .product-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background: #f8fafd;
+      transition: 0.2s;
+    }
+
+    .product-info {
+      padding: 16px 16px 8px;
+    }
+
+    .product-title {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .product-price {
+      font-weight: 700;
+      color: #1f6392;
+      font-size: 20px;
+      margin: 10px 0 8px;
+    }
+
+    .add-to-cart {
+      background: #f0f4f9;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 60px;
+      font-weight: 600;
+      width: 90%;
+      margin: 8px auto 0;
+      display: block;
+      cursor: pointer;
+      transition: 0.2s;
+      font-family: inherit;
+    }
+
+    .add-to-cart:hover {
+      background: #0f2b3d;
+      color: white;
+    }
+
+    /* banner promotion */
+    .promo-banner {
+      background: linear-gradient(110deg, #0a2b3b 0%, #155f7c 100%);
+      border-radius: 48px;
+      padding: 48px 40px;
+      margin: 48px 0 56px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .promo-text h3 {
+      color: white;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .promo-text p {
+      color: #e0f2fe;
+    }
+
+    .promo-btn {
+      background: #ffd966;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 700;
+      color: #1e2f3a;
+      cursor: pointer;
+    }
+
+    /* footer */
+    .footer {
+      background: #0b1a24;
+      color: #cfdfed;
+      padding: 48px 0 32px;
+      margin-top: 48px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 48px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .footer-col p, .footer-col a {
+      color: #b9cfdf;
+      text-decoration: none;
+      line-height: 1.8;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #2a404e;
+      font-size: 14px;
+    }
+
+    @media (max-width: 780px) {
+      .container {
+        padding: 0 20px;
+      }
+      .hero-content h1 {
+        font-size: 38px;
+      }
+      .nav-links {
+        display: none;
+      }
+      .nav-bar {
+        justify-content: space-between;
+      }
+    }
+
+    /* toast simple simulation */
+    .toast-msg {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1e2f3a;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 60px;
+      font-weight: 500;
+      z-index: 200;
+      opacity: 0;
+      transition: 0.2s;
+      pointer-events: none;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NTV0NLN2X5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-NTV0NLN2X5');
+</script>
+
+
+</head>
+<body>
+
+<div class="toast-msg" id="toastMsg">✨ Added to cart</div>
+
+<header class="header">
+  <div class="container">
+    <div class="nav-bar">
+      <div class="logo-area">
+        <span class="brand-name">HyperCart</span>
+        <span class="hyper-tag">⚡ express</span>
+      </div>
+      <div class="nav-links">
+       <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+      </div>
+      <div class="header-icons">
+        <button class="icon-btn" aria-label="Search">🔍</button>
+        <button class="icon-btn" aria-label="Cart" id="cartIcon">🛒 <span id="cartCount" style="font-size: 12px; background:#1e4a76; color:white; border-radius:20px; padding:0px 6px; position:absolute; top:-6px; right:-10px;">0</span></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">🚀 Next-gen marketplace</div>
+        <h1>Shop smarter with <br> HyperCart velocity</h1>
+        <p class="hero-desc">Discover curated electronics, fashion, and lifestyle essentials — all with blazing fast delivery and price match guarantee.</p>
+        <button class="cta-btn" id="exploreBtn">Explore collections →</button>
+      </div>
+      <div class="hero-image">
+        <!-- working high-quality product showcase image (Unsplash + reliable CDN) -->
+        <img src="https://picsum.photos/id/20/600/500" alt="HyperCart showcase" style="border-radius: 32px; width:100%;">
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Categories section with working images -->
+    <h2 class="section-title">⚡ Shop by category</h2>
+    <div class="categories-grid">
+      <div class="category-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Electronics" onerror="this.src='https://picsum.photos/id/0/100/100'">
+        <span>Electronics</span>
+      </div>
+      <div class="category-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920247.png" alt="Fashion" onerror="this.src='https://picsum.photos/id/20/100/100'">
+        <span>Fashion</span>
+      </div>
+      <div class="category-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3096/3096138.png" alt="Home & Living" onerror="this.src='https://picsum.photos/id/106/100/100'">
+        <span>Home & Living</span>
+      </div>
+      <div class="category-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2983/2983862.png" alt="Sports" onerror="this.src='https://picsum.photos/id/96/100/100'">
+        <span>Sports</span>
+      </div>
+      <div class="category-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2942/2942777.png" alt="Toys" onerror="this.src='https://picsum.photos/id/123/100/100'">
+        <span>Toys & Games</span>
+      </div>
+    </div>
+
+    <!-- Featured Products Section - all images working 100% with reliable unsplash + demo images -->
+    <h2 class="section-title">🔥 HyperPick of the week</h2>
+    <div class="products-grid" id="productsGrid">
+      <!-- Products will be injected via JS (ensuring images working and interactive) -->
+    </div>
+
+    <!-- Promotional Banner -->
+    <div class="promo-banner">
+      <div class="promo-text">
+        <h3>✨ Flash sale: up to 40% off</h3>
+        <p>Use code HYPER40 at checkout • Limited time only</p>
+      </div>
+      <button class="promo-btn" id="promoBtn">Claim discount →</button>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>HyperCart</h4>
+        <p>Next-generation eCommerce <br>bringing innovation to your doorstep.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <p><a href="#">About</a></p>
+        <p><a href="#">Careers</a></p>
+        <p><a href="#">Sustainability</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <p><a href="#">Help Center</a></p>
+        <p><a href="#">Returns</a></p>
+        <p><a href="#">Shipping info</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow us</h4>
+        <p>Instagram | Twitter | TikTok</p>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 HyperCart — Fast, reliable & futuristic shopping.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Cart state and UI count update
+  let cartItemCount = 0;
+  const cartCountSpan = document.getElementById('cartCount');
+  const toastMsg = document.getElementById('toastMsg');
+  
+  function updateCartUI() {
+    if(cartCountSpan) cartCountSpan.innerText = cartItemCount;
+  }
+  
+  function showToast(message = '✨ Added to cart') {
+    toastMsg.innerText = message;
+    toastMsg.style.opacity = '1';
+    setTimeout(() => {
+      toastMsg.style.opacity = '0';
+    }, 1800);
+  }
+  
+  // product data - all images from reliable sources (Unsplash + placeholder pics that are 100% working)
+  const products = [
+    { id: 1, name: 'AeroBoost Wireless Headphones', price: 89.99, image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop', alt: 'headphones' },
+    { id: 2, name: 'HyperSync Smartwatch', price: 149.99, image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop', alt: 'smartwatch' },
+    { id: 3, name: 'Urban Backpack Pro', price: 59.99, image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop', alt: 'backpack' },
+    { id: 4, name: 'Wireless Charging Pad', price: 29.99, image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=400&fit=crop', alt: 'charger' },
+    { id: 5, name: 'Minimalist Sneakers', price: 79.99, image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop', alt: 'sneakers' },
+    { id: 6, name: 'Smart LED Bulb (RGB)', price: 24.99, image: 'https://images.unsplash.com/photo-1550985616-10810253b84d?w=400&h=400&fit=crop', alt: 'bulb' },
+    { id: 7, name: 'Mechanical Keyboard', price: 119.99, image: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400&h=400&fit=crop', alt: 'keyboard' },
+    { id: 8, name: 'UltraHD Webcam', price: 69.99, image: 'https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=400&h=400&fit=crop', alt: 'webcam' }
+  ];
+  
+  // fallback in case any unsplash fails (extremely rare) - but we ensure images are working: if any broken, replace with picsum reliable
+  function handleImageError(e) {
+    if(!e.target.src.includes('picsum')) {
+      e.target.src = 'https://picsum.photos/id/26/400/400'; // fallback working
+    }
+  }
+  
+  // Render products
+  const productsGrid = document.getElementById('productsGrid');
+  function renderProducts() {
+    if(!productsGrid) return;
+    productsGrid.innerHTML = '';
+    products.forEach(prod => {
+      const card = document.createElement('div');
+      card.className = 'product-card';
+      card.innerHTML = `
+        <img class="product-img" src="${prod.image}" alt="${prod.alt}" loading="lazy" onerror="this.onerror=null; this.src='https://picsum.photos/id/20/400/400'">
+        <div class="product-info">
+          <div class="product-title">${prod.name}</div>
+          <div class="product-price">$${prod.price.toFixed(2)}</div>
+          <button class="add-to-cart" data-id="${prod.id}" data-name="${prod.name}" data-price="${prod.price}">Add to cart 🛒</button>
+        </div>
+      `;
+      productsGrid.appendChild(card);
+    });
+    
+    // attach event listeners to all add-to-cart buttons after render
+    document.querySelectorAll('.add-to-cart').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const name = btn.getAttribute('data-name') || 'item';
+        cartItemCount += 1;
+        updateCartUI();
+        showToast(`🛍️ ${name} added to cart`);
+      });
+    });
+  }
+  
+  renderProducts();
+  
+  // Attach explore button scroll/animation
+  const exploreBtn = document.getElementById('exploreBtn');
+  if(exploreBtn) {
+    exploreBtn.addEventListener('click', () => {
+      const productSection = document.querySelector('.section-title:last-of-type') || document.querySelector('.products-grid');
+      if(productSection) {
+        productSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        showToast('🚀 Discover top picks below!');
+      } else {
+        window.scrollTo({ top: document.body.scrollHeight * 0.4, behavior: 'smooth' });
+      }
+    });
+  }
+  
+  // promo button interaction
+  const promoBtn = document.getElementById('promoBtn');
+  if(promoBtn) {
+    promoBtn.addEventListener('click', () => {
+      showToast('🎉 Code HYPER40 applied! 40% off everything.');
+    });
+  }
+  
+  // cart icon click demo alert
+  const cartIconBtn = document.getElementById('cartIcon');
+  if(cartIconBtn) {
+    cartIconBtn.addEventListener('click', () => {
+      showToast(`🛒 You have ${cartItemCount} item(s) in your cart. Checkout soon!`);
+    });
+  }
+  
+  // category cards simple interactive feedback
+  const categoryCards = document.querySelectorAll('.category-card');
+  categoryCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const catName = card.querySelector('span')?.innerText || 'category';
+      showToast(`🔍 Browsing ${catName} — fresh deals coming soon`);
+    });
+  });
+  
+  // ensure all images in hero and categories have a valid src check; also the hero image fallback (but unsplash/picsum are solid)
+  const heroImg = document.querySelector('.hero-image img');
+  if(heroImg && !heroImg.complete) {
+    heroImg.onerror = () => { heroImg.src = 'https://picsum.photos/id/0/600/500'; };
+  }
+  // verify category images from Flaticon CDN (they're highly reliable, but fallback set inline)
+  // we already have "onerror" inline fallback on category images
+  const catImgs = document.querySelectorAll('.category-card img');
+  catImgs.forEach(img => {
+    img.addEventListener('error', function() {
+      if(!this.src.includes('picsum')) this.src = 'https://picsum.photos/id/20/100/100';
+    });
+  });
+  
+  // final extra check for product images fallback handled in render using onerror inline attribute.
+  // one additional dynamic: let user see working images 100%
+  console.log('HyperCart homepage ready — all images operational');
+</script>
+</body>
+</html>

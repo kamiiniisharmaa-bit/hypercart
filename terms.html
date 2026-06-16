@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>HyperCart | Terms of Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fafafc;
+      color: #1a2c3e;
+      line-height: 1.55;
+    }
+
+    /* container */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* header identical to homepage */
+    .header {
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 4px 12px rgba(0,0,0,0.02);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(2px);
+      background: rgba(255,255,255,0.96);
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 18px 0;
+      gap: 16px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .brand-name {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #0b2b5e, #1e4a76);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-decoration: none;
+    }
+
+    .brand-name a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .hyper-tag {
+      font-size: 14px;
+      font-weight: 500;
+      background: #eef2ff;
+      color: #1e4a76;
+      padding: 2px 8px;
+      border-radius: 40px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #2c3e50;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #1e5a8b;
+    }
+
+    .header-icons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .icon-btn {
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      color: #1f2e3a;
+      transition: 0.2s;
+    }
+
+    /* terms specific styling */
+    .terms-hero {
+      background: linear-gradient(110deg, #f4f9ff 0%, #eef3fc 100%);
+      padding: 56px 0 40px;
+      border-bottom: 1px solid #e2edf7;
+    }
+
+    .terms-header {
+      max-width: 900px;
+    }
+
+    .terms-header h1 {
+      font-size: 48px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #0f2b3d, #1f6392);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 16px;
+    }
+
+    .last-updated {
+      color: #5d6f83;
+      font-size: 15px;
+      margin-top: 8px;
+      border-left: 4px solid #2b6e9e;
+      padding-left: 16px;
+    }
+
+    .terms-content {
+      max-width: 1100px;
+      margin: 56px auto 80px;
+      background: white;
+      border-radius: 36px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+      padding: 48px 56px;
+    }
+
+    .terms-section {
+      margin-bottom: 42px;
+    }
+
+    .terms-section h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #0b2b46;
+      margin-bottom: 18px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e5eff7;
+    }
+
+    .terms-section h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 24px 0 12px 0;
+      color: #1f4e6e;
+    }
+
+    .terms-section p, .terms-section li {
+      color: #2c4258;
+      margin-bottom: 14px;
+      line-height: 1.6;
+    }
+
+    .terms-section ul, .terms-section ol {
+      margin: 16px 0 20px 28px;
+    }
+
+    .terms-section li {
+      margin-bottom: 8px;
+    }
+
+    .highlight-box {
+      background: #f0f6fe;
+      border-left: 4px solid #1f6392;
+      padding: 22px 28px;
+      border-radius: 24px;
+      margin: 28px 0;
+    }
+
+    .terms-footer {
+      text-align: center;
+      margin-top: 24px;
+      padding-top: 28px;
+      border-top: 1px solid #e2edf2;
+      font-size: 14px;
+      color: #5f7f9a;
+    }
+
+    /* footer identical to homepage */
+    .footer {
+      background: #0b1a24;
+      color: #cfdfed;
+      padding: 48px 0 32px;
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 48px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    .footer-col p, .footer-col a {
+      color: #b9cfdf;
+      text-decoration: none;
+      line-height: 1.8;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #2a404e;
+      font-size: 14px;
+    }
+
+    @media (max-width: 780px) {
+      .container {
+        padding: 0 20px;
+      }
+      .nav-links {
+        display: none;
+      }
+      .terms-content {
+        padding: 32px 24px;
+      }
+      .terms-header h1 {
+        font-size: 36px;
+      }
+    }
+
+    .toast-msg {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1e2f3a;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 60px;
+      font-weight: 500;
+      z-index: 200;
+      opacity: 0;
+      transition: 0.2s;
+      pointer-events: none;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NTV0NLN2X5"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-NTV0NLN2X5');
+</script>
+
+</head>
+<body>
+<div class="toast-msg" id="toastMsg">📄 Page ready</div>
+
+<header class="header">
+  <div class="container">
+    <div class="nav-bar">
+      <div class="logo-area">
+        <a href="#" style="text-decoration: none; display: flex; align-items: baseline; gap: 6px;" id="homeLink">
+          <span class="brand-name">HyperCart</span>
+          <span class="hyper-tag">⚡ express</span>
+        </a>
+      </div>
+      <div class="nav-links">
+       <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About Us</a>
+      </div>
+      <div class="header-icons">
+        <button class="icon-btn" aria-label="Search">🔍</button>
+        <button class="icon-btn" aria-label="Cart">🛒</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="terms-hero">
+    <div class="container">
+      <div class="terms-header">
+        <h1>Terms of Service</h1>
+        <p class="last-updated">Last updated: June 12, 2026 — Version 2.1</p>
+        <p style="margin-top: 18px; font-size: 18px; color: #2b5b84;">Welcome to HyperCart. By accessing or using our platform, you agree to comply with and be bound by the following terms. Please read them carefully.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="terms-content">
+      <div class="terms-section">
+        <h2>1. Acceptance of Terms</h2>
+        <p>These Terms of Service ("Terms") govern your use of the HyperCart website, mobile application, and related services (collectively, the "Service"). By registering, browsing, or making a purchase on HyperCart, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree, please do not use our Service.</p>
+        <p>HyperCart reserves the right to update or modify these Terms at any time without prior notice. Your continued use of the Service after any changes constitutes acceptance of the new Terms.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>2. Eligibility & Account Registration</h2>
+        <p>You must be at least 18 years old or the age of majority in your jurisdiction to use HyperCart. By creating an account, you represent that you are eligible and that all information you provide is accurate, current, and complete.</p>
+        <p>You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. Notify us immediately of any unauthorized use. HyperCart reserves the right to refuse service, terminate accounts, or cancel orders at our sole discretion.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>3. Products, Pricing & Availability</h2>
+        <p>All product descriptions, images, and prices are subject to change without notice. We strive to display accurate information, but we do not warrant that product descriptions, colors, or other content are error-free. HyperCart reserves the right to correct any errors, inaccuracies, or omissions and to change or update information at any time.</p>
+        <p>Prices are listed in USD (or local currency where applicable) and do not include applicable taxes or shipping fees, which will be added at checkout. Promotional codes and discounts are subject to specific terms and may be revoked if misused.</p>
+        <div class="highlight-box">
+          <strong>💡 Price Match Guarantee:</strong> If you find a lower price on an identical item from a qualifying retailer, we'll match it within 14 days of purchase. See our support center for details.
+        </div>
+      </div>
+
+      <div class="terms-section">
+        <h2>4. Orders & Payment</h2>
+        <p>When you place an order, you receive an order confirmation email. This does not signify our acceptance of your order; it is a confirmation that we have received it. HyperCart reserves the right to accept or decline any order for any reason (including stock limitations, payment issues, or suspected fraud).</p>
+        <p>We accept major credit cards, PayPal, and other secure payment methods. By providing payment information, you represent that you are authorized to use the selected payment method. All transactions are encrypted and processed via PCI-compliant gateways.</p>
+        <h3>Cancellation Rights</h3>
+        <p>You may cancel an order before it is processed for shipping. Contact customer support immediately. Once shipped, our standard return policy applies.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>5. Shipping & Delivery</h2>
+        <p>Shipping timelines are estimates and not guaranteed unless specified. HyperCart is not responsible for delays caused by carriers, customs, or events beyond our control. Risk of loss passes to you upon delivery to the carrier. We currently ship to select regions; international buyers are responsible for customs duties and import taxes.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>6. Returns & Refunds</h2>
+        <p>We want you to love every purchase. Most unused, unopened items in original condition may be returned within 30 days of delivery. Certain exclusions apply (e.g., perishables, personalized goods). Refunds will be issued to the original payment method within 10 business days after we receive and inspect the returned item. Shipping costs are non-refundable unless the return is due to our error.</p>
+        <p>For defective or damaged items, please contact our support team within 48 hours of delivery for a replacement or full refund, including return shipping.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>7. User Conduct & Prohibited Activities</h2>
+        <p>You agree not to misuse the Service, including but not limited to:</p>
+        <ul>
+          <li>Attempting to interfere with or disrupt the integrity or performance of the Service.</li>
+          <li>Using any robot, spider, scraper, or other automated means to access HyperCart for any purpose without our express written permission.</li>
+          <li>Posting false, misleading, or fraudulent information or reviews.</li>
+          <li>Violating any applicable laws or third-party rights.</li>
+        </ul>
+        <p>We may terminate or suspend your access immediately for any prohibited conduct.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>8. Intellectual Property</h2>
+        <p>All content on HyperCart — including text, graphics, logos, icons, images, audio clips, digital downloads, and software — is the property of HyperCart or its content suppliers and is protected by international copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, modify, or create derivative works without prior written consent. "HyperCart" and the lightning cart logo are registered trademarks.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>9. Third-Party Links & Services</h2>
+        <p>The Service may contain links to third-party websites or services that are not owned or controlled by HyperCart. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites. You acknowledge and agree that HyperCart shall not be liable for any damage or loss caused by such third-party interactions.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>10. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, HyperCart and its affiliates, directors, employees, or agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill, arising from your use of the Service or any products purchased, even if advised of the possibility. In jurisdictions that do not allow certain exclusions, liability shall be limited to the fullest extent permitted by law.</p>
+        <div class="highlight-box">
+          <strong>⚠️ Important:</strong> HyperCart's total liability to you for any claim arising from these Terms or your use of the Service shall not exceed the amount you paid us in the twelve months preceding the event giving rise to liability.
+        </div>
+      </div>
+
+      <div class="terms-section">
+        <h2>11. Indemnification</h2>
+        <p>You agree to indemnify, defend, and hold harmless HyperCart, its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or related to your violation of these Terms or your misuse of the Service.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>12. Governing Law & Dispute Resolution</h2>
+        <p>These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of law principles. Any dispute arising from these Terms or your use of HyperCart shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association, unless you opt out within 30 days of first accepting these Terms. Class action waivers apply.</p>
+        <p>For disputes under $5,000, you may bring a claim in small claims court. Either party may seek injunctive relief in courts of competent jurisdiction to protect intellectual property rights.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>13. Termination</h2>
+        <p>HyperCart may terminate or suspend your account and access to the Service immediately, without prior notice, for conduct that we believe violates these Terms or is harmful to other users or the platform. Upon termination, your right to use the Service will cease, and any pending orders may be canceled. Sections related to intellectual property, indemnification, and limitation of liability shall survive termination.</p>
+      </div>
+
+      <div class="terms-section">
+        <h2>14. Entire Agreement</h2>
+        <p>These Terms, together with our Privacy Policy and any additional guidelines or policies referenced herein, constitute the entire agreement between you and HyperCart regarding the Service and supersede all prior agreements and understandings.</p>
+      </div>
+
+      <div class="terms-footer">
+        <p>If you have any questions about these Terms, please contact our Legal Support Team at <strong>legal@hypercart.com</strong> or via our support portal.</p>
+        <p style="margin-top: 12px;">✨ HyperCart — where innovation meets seamless commerce.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>HyperCart</h4>
+        <p>Next-generation eCommerce <br>bringing innovation to your doorstep.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <p><a href="#">About</a></p>
+        <p><a href="#">Careers</a></p>
+        <p><a href="#">Sustainability</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <p><a href="#">Help Center</a></p>
+        <p><a href="#">Returns</a></p>
+        <p><a href="#">Shipping info</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <p><a href="#" style="font-weight:500;">Terms of Service</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+        <p><a href="#">Cookie Settings</a></p>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 HyperCart — Fast, reliable & futuristic shopping. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // simple toast message for interactive feedback
+  const toast = document.getElementById('toastMsg');
+  function showToast(message) {
+    if(!toast) return;
+    toast.innerText = message;
+    toast.style.opacity = '1';
+    setTimeout(() => {
+      toast.style.opacity = '0';
+    }, 2000);
+  }
+
+  // Show a subtle "page ready" after load
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      showToast('📜 HyperCart Terms of Service — updated June 2026');
+    }, 300);
+  });
+
+  // Home link redirect behavior (simulate homepage)
+  const homeLink = document.getElementById('homeLink');
+  if(homeLink) {
+    homeLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      showToast('🏠 Returning to HyperCart homepage... (simulated)');
+      setTimeout(() => {
+        window.location.href = '#';  // In real scenario we would point to index, but for demo it's inline
+        alert('✨ In a full experience, this would redirect to the homepage. Your HyperCart dashboard is ready!');
+      }, 200);
+    });
+  }
+
+  // interactive footer links basic demo
+  const footerLinks = document.querySelectorAll('.footer-col a');
+  footerLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      if(link.getAttribute('href') === '#') {
+        e.preventDefault();
+        showToast(`🔗 Navigating to ${link.innerText} — more info coming soon`);
+      }
+    });
+  });
+
+  // header icons small interaction
+  const searchBtn = document.querySelector('.icon-btn[aria-label="Search"]');
+  if(searchBtn) {
+    searchBtn.addEventListener('click', () => showToast('🔎 Search products: coming soon!'));
+  }
+  const cartBtn = document.querySelector('.icon-btn[aria-label="Cart"]');
+  if(cartBtn) {
+    cartBtn.addEventListener('click', () => showToast('🛒 Your cart is ready — start shopping!'));
+  }
+
+  // add smooth scroll for any anchor (but not required)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if(href !== "#" && href !== "#!" && href !== "#homeLink") {
+        const target = document.querySelector(href);
+        if(target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>
